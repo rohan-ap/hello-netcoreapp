@@ -7,7 +7,7 @@
 
 # Use philippgille/dotnet-libglib as long as the AppImage gets created in build.sh.
 # In the final Docker image the AppImage isn't needed, so "FROM microsoft/dotnet:2.0-sdk" would suffice.
-FROM image-registry.openshift-image-registry.svc:5000/openshift/dotnet@sha256:667faba20f5bac8712eefd33710563dd42e6a475db23d29f499c066f306f4f30
+FROM mcr.microsoft.com/dotnet/core/runtime:2.0
 
 WORKDIR /app
 # Make use of Docker layering: cached layer
